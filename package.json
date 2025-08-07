@@ -1,0 +1,64 @@
+{
+  "name": "forumskubs-theme",
+  "version": "1.0.0",
+  "description": "Custom Ghost theme for forumskubs.lv – the official site of Forums KUBS, a national platform for student leaders in Latvia.",
+  "author": {
+    "name": "Alens Aleksandrs Čerņa",
+    "email": "contact@alens.lv",
+    "url": "https://www.alens.lv"
+  },
+  "license": "LGPL-3.0-or-later",
+  "engines": {
+    "ghost": ">=5.0.0"
+  },
+  "type": "module",
+  "keywords": [
+    "ghost-theme",
+    "handlebars",
+    "forumskubs",
+    "students",
+    "latvia"
+  ],
+  "config": {
+    "posts_per_page": 3
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlensAleksandrs/ForumsKubs"
+  },
+  "bugs": {
+    "url": "https://github.com/AlensAleksandrs/ForumsKubs/issues"
+  },
+  "homepage": "https://forumskubs.lv",
+  "contributors": [
+    {
+      "name": "Alens Aleksandrs Čerņa",
+      "email": "contact@alens.lv"
+    }
+  ],
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/css/index.css -o ./assets/built/index.css --watch",
+    "build": "tailwindcss -i ./assets/css/index.css -o ./assets/built/index.css --minify",
+    "zip": "npm run build && zip -r forumskubs.zip . -x \"node_modules/*\" \".git/*\" \".*/**\"",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,css,md,json}": "prettier --write",
+    "*.css": "stylelint",
+    "*.hbs": "htmlhint"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "@tailwindcss/typography": "github:tailwindcss/typography",
+    "htmlhint": "^1.1.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.6.2",
+    "stylelint": "^16.23.0",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-config-tailwindcss": "^1.0.0"
+  }
+}

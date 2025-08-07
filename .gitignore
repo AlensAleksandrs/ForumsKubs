@@ -1,0 +1,28 @@
+# Node dependencies
+node_modules/
+
+# Tailwind CSS output
+assets/built/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*
+
+# MacOS metadata
+Icon?
+
+# Husky internal hook scripts
+.husky/_/
+
+# IDE
+.vscode/
+.idea/
