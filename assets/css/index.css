@@ -62,7 +62,7 @@ body {
 
 @theme {
   --color-container-dark: #141414; /* Default dark container background color */
-  --color-container-dark-t: #141414cc; /* Transparent dark container background color */
+  --color-container-dark-t: #0f0f0fdd; /* Transparent dark container background color */
   --color-container-light: #fefefe; /* Default dark container background color */
   --color-light: #fefefe; /* Default light text color */
   --color-light-alt: #aaa; /* Alternative light text color */
