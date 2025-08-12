@@ -11,7 +11,7 @@ sponsor teaser container
   </div>
 </div>
 <div class="w-full h-full bg-container-dark p-8">
-  {{#get "posts" filter="tag:hash-member" order="title" as |members|}}
+  {{#get "posts" filter="tag:hash-member" order="title" limit="all" as |members|}}
     {{#if members}}
       <div class="contained grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
         {{#foreach members}}
