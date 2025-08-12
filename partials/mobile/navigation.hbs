@@ -1,0 +1,9 @@
+{{!--
+site-wide navigation container
+--}}
+
+<nav id="mobile-site-nav" class="w-full h-full flex flex-col items-center justify-center gap-16">
+  {{#foreach navigation}}
+    <a id="site-nav-link" href="{{this.url}}" class="font-semibold text-md text-light uppercase hover:cursor-pointer hover:underline {{#if current}}hidden{{/if}}">{{label}}</a>
+  {{/foreach}}
+</nav>

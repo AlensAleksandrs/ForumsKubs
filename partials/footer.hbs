@@ -1,0 +1,98 @@
+{{!--
+Site-wide footer
+--}}
+
+<footer id="site-footer" class="w-full bg-container-dark text-light-alt font-light text-xs md:text-sm">
+  <div class="mx-auto max-w-screen-lg px-6 py-10">
+    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+
+      <section class="space-y-6">
+        <div class="flex flex-col items-center sm:items-start">
+          <img
+            src="{{asset "images/logo.png"}}"
+            alt="Forums KUBS logo"
+            class="h-16 w-auto"
+            loading="lazy"
+            decoding="async"
+          />
+          <p class="mt-4 text-center sm:text-left leading-relaxed">
+            VISAS TIESĪBAS AIZSARGĀTAS<br>© FORUMS KUBS 2024
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center sm:items-start">
+          <img
+            src="{{asset "images/Alens.svg"}}"
+            alt="Izstrādātājs — Alens Aleksandrs Čerņa"
+            class="h-6 w-auto mt-4 mb-2"
+            loading="lazy"
+            decoding="async"
+          />
+          <p>
+            Izstrādāja
+            <a class="text-light underline-offset-2 hover:underline"
+               href="https://alens.lv"
+               target="_blank" rel="noopener noreferrer">Alens Aleksandrs Čerņa</a>
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center sm:items-start">
+          <img
+            src="{{asset "images/Rendezvous.svg"}}"
+            alt='Uzturētājs — SIA "Rendezvous"'
+            class="h-4 w-auto mt-4 mb-2"
+            loading="lazy"
+            decoding="async"
+          />
+          <p>
+            Uztur
+            <a class="text-light underline-offset-2 hover:underline"
+               href="https://rendezvous.lv"
+               target="_blank" rel="noopener noreferrer">SIA “Rendezvous”</a>
+          </p>
+        </div>
+      </section>
+      <section class="text-center sm:text-left">
+        {{> "requisites"}}
+      </section>
+
+      <nav aria-label="Sitemap" class="sm:col-span-2 md:col-span-1">
+        <div class="flex flex-col gap-6">
+          <div>
+            <h3 class="font-medium text-light mb-2 text-center sm:text-left">Mājaslapas karte</h3>
+            <ul class="space-y-1 text-center sm:text-left">
+              <li><a href="/contacts" class="hover:text-light">Forums KUBS komanda</a></li>
+              <li><a href="/news" class="hover:text-light">Ziņu lapa</a></li>
+              <li><a href="/contacts" class="hover:text-light">Kontakti</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-light mb-2 text-center sm:text-left">Noderīgi resursi</h3>
+            <ul class="space-y-1 text-center sm:text-left">
+              <li><a href="/gallery" class="hover:text-light">Galerija</a></li>
+              <li>
+                <a href="https://github.com/AlensAleksandrs/ForumsKubs"
+                   class="hover:text-light"
+                   target="_blank" rel="noopener noreferrer">
+                  Mājaslapas pirmkods
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-medium text-light mb-2 text-center sm:text-left">Mūsu normatīvie akti</h3>
+            <ul class="space-y-1 text-center sm:text-left">
+              <li><a href="/document" class="hover:text-light">Biedrības statūti</a></li>
+              <li><a href="/document" class="hover:text-light">Vēlēšanu nolikums</a></li>
+              <li><a href="/document" class="hover:text-light">Datu drošības un privātuma politika</a></li>
+              <li><a href="/document" class="hover:text-light">Mājaslapas lietošanas noteikumi</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</footer>

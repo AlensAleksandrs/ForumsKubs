@@ -1,0 +1,23 @@
+{{!--
+sponsor teaser container
+--}}
+
+<div class="w-full h-full bg-container-light p-8">
+  <div class="contained opacity-0 translate-y-4 transition-all duration-700 ease-out fade-slide">
+    <h3 class="text-3xl md:text-4xl font-extrabold mb-2">Sadarbības partneri</h3>
+    <div>
+      <p class="md:columns-2 font-light text-justify">Sadarbības partneru atbalsts ir neatņemama daļa no sadarbības foruma. Tieši šāds atbalsts sniedz studentiem iespēju iegūt vērtīgas zināšanas un prasmes, kas noderēs gan viņu personīgajā, gan profesionālajā izaugsmē. Pateicoties mūsu partneru iesaistei, studenti var piedalīties mācību un attīstības pasākumos, kuros tiek attīstītas viņu līderības spējas, komunikācija un spēja risināt problēmas. Šīs prasmes ir būtiskas, lai kļūtu par kompetentiem un atbildīgiem profesionāļiem un pārstāvjiem. Mūsu partneri nodrošina studentiem iespēju ne tikai mācīties no pieredzējušiem ekspertiem, bet arī attīstīt praktiskas iemaņas.</p>
+    </div>
+  </div>
+</div>
+<div class="w-full h-full bg-container-dark p-8">
+{{#get "posts" filter="tag:hash-sponsor" order="featured" as |sponsors|}}
+  {{#if sponsors}}
+    <div class="contained grid place-items-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
+      {{#foreach sponsors}}
+        {{> "sponsor-logo" sponsor=this}}
+      {{/foreach}}
+    </div>
+  {{/if}}
+{{/get}}
+</div>

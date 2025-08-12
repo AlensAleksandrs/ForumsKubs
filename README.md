@@ -27,13 +27,13 @@ further development of the theme and usage of it in a live environment.
 
 **Prerequisites:**
 
-- [Node.js]() (v18.x recommended for Ghost compatability)
-- [Ghost CLI]() (installed globally) `npm install -g ghost-cli`
+- [Node.js](https://nodejs.org/en/download) (v18.x recommended for Ghost compatability)
+- [Ghost CLI](https://docs.ghost.org/ghost-cli) (installed globally) `npm install -g ghost-cli`
 - Theme repository contents cloned into the `/content/themes/` directory
-- [Prettier]()
-- [Stylelint]()
-- [HTMLHint]()
-- [Husky]() with lint-staged for pre-commit hook
+- [Prettier](https://prettier.io/docs/install)
+- [Stylelint](https://stylelint.io/user-guide/get-started)
+- [HTMLHint](https://htmlhint.com/getting-started/)
+- [Husky](https://typicode.github.io/husky/get-started.html) with lint-staged for pre-commit hook
 
 #### 1. Install dependencies
 

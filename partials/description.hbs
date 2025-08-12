@@ -1,0 +1,30 @@
+{{!--
+Event description container
+--}}
+<div class="w-full h-full bg-container-light p-8">
+  <div class="contained grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="w-full opacity-0 translate-y-4 transition-opacity transition-transform duration-500 ease-out fade-slide [will-change:transform,opacity]">
+      <picture class="block">
+        <source srcset="{{asset "images/event-alt.png"}}" media="(min-width:768px) and (max-width:1023px)">
+        <source srcset="{{asset "images/event.png"}}" media="(min-width:1024px)">
+        <img
+          src="{{asset "images/event.png"}}"
+          alt="Forums KUBS"
+          loading="lazy"
+          decoding="async"
+          class="block w-full h-auto rounded-xl transform-gpu grayscale hover:grayscale-0
+             transition-transform duration-300 ease-out hover:scale-105 hover:rotate-[0.5deg]" />
+      </picture>
+    </div>
+    <div class="md:pl-8 opacity-0 translate-y-4 transition-all duration-700 ease-out fade-slide">
+      <h3 id="partner-title" class="text-3xl md:text-4xl font-extrabold mt-8 mb-2">Kas ir Forums KUBS?</h3>
+      <p class="font-light text-justify">
+        KUBS ir vieta, kur Tu pirmo reizi patiesi iepazīsti un sadarbojies ar citu augstākās izglītības iestāžu studentu pašpārvaldēm.
+        Dalībniekiem tā ir unikāla iespēja veidot vērtīgus kontaktus un iepazīt dažādas augstākās izglītības iestādes, savukārt organizatoriem – iespēja pārbaudīt un attīstīt savas komandas darba prasmes, sadarbojoties ar citu augstskolu pārstāvjiem.
+        <br><br>
+        Tā ir dinamiska platforma aktīviem studentiem, kur satikties, veidot kontaktu tīklu un, pats galvenais, iegūt pieredzi, kas paliks līdzi visu mūžu.
+        KUBS ir projekts bez aizspriedumiem un slēptiem nolūkiem – tas sniedz enerģiju, iedvesmu un iespēju personīgajai izaugsmei ikvienam, kurš tajā iesaistās.
+      </p>
+    </div>
+  </div>
+</div>

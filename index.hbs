@@ -1,5 +1,18 @@
 {{!< default}}
 
 <main class="content">
-    Hello world!
+    <header style="background-image: url({{asset "images/background.png"}})" class="relative p-16 w-screen bg-cover bg-center min-h-[500px] sm:min-h-[600px] md:min-h-[750px] flex flex-col">
+      {{navigation}}
+      {{> "hero"}}
+    </header>
+  {{> "latest-posts" limit=3}}
+  {{> "description"}}
+  {{> "banner"}}
+  {{> "sponsor-showcase"}}
+  {{> "member-showcase"}}
+  {{> "footer"}}
 </main>
+
+{{#> "dialog-backdrop" identifier="mobile-nav-overlay"}}
+  {{> "mobile/navigation" navigation=navigation}}
+{{/"dialog-backdrop"}}

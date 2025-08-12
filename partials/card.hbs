@@ -1,0 +1,28 @@
+{{!--
+Re-usable card for linking to posts
+--}}
+
+<article class="{{post_class}} opacity-0 translate-y-4 transition-all duration-700 ease-out fade-slide">
+  <a href="{{url}}" class="block h-full">
+    <div class="w-full aspect-16/10 overflow-hidden">
+      <img
+        src="{{#if feature_image}}{{feature_image}}{{else}}{{asset "images/post_fallback.png"}}{{/if}}"
+        alt=""
+        loading="lazy"
+        decoding="async"
+        class="w-full h-full object-cover transition-transform duration-300 ease-out transform-gpu [will-change:transform] hover:scale-105"
+        width="1600" height="1000" />
+    </div>
+
+    <div class="mt-2">
+      <div class="text-center text-sm text-gray-500">
+        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+        <span>&bull;</span> {{reading_time}}
+      </div>
+
+      <h2 class="font-bold mt-1">{{title}}</h2>
+      <p class="line-clamp-4 text-justify mt-1">{{excerpt}}</p>
+      <p class="underline text-sm mt-2">Lasīt rakstu</p>
+    </div>
+  </a>
+</article>
