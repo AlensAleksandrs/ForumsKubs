@@ -1,31 +1,24 @@
 {{!< default}}
 
-<article class="post">
-    <header class="post-header">
-        <h1 class="post-title">{{title}}</h1>
-        <section class="post-meta">
-            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMMM YYYY"}}</time>
-            {{#if primary_author}}
-                • by <a href="{{primary_author.url}}">{{primary_author.name}}</a>
-            {{/if}}
-        </section>
-    </header>
+<main class="content flex flex-col">
+  <header style="background-image: url({{asset "images/background.png"}})" class="relative p-16 w-screen bg-cover bg-center min-h-[550px] sm:min-h-[450px] flex flex-col">
+    {{navigation}}
+    {{> "hero"}}
+  </header>
+{{#post}}
+  {{#has tag="#sponsor"}}
+    {{> "sponsor-post"}}
+  {{else}}
+    {{#has tag="#member"}}
+      {{> "member-post"}}
+    {{else}}
+      {{> "news-post"}}
+    {{/has}}
+  {{/has}}
+{{/post}}
+  {{> "footer"}}
+</main>
 
-    {{#if feature_image}}
-        <figure class="post-feature-image">
-            <img src="{{feature_image}}" alt="{{title}}">
-        </figure>
-    {{/if}}
-
-    <section class="post-content">
-        {{content}}
-    </section>
-
-    <footer class="post-footer">
-        {{#if tags}}
-            <div class="post-tags">
-                {{tags separator=", "}}
-            </div>
-        {{/if}}
-    </footer>
-</article>
+{{#> "dialog-backdrop" identifier="mobile-nav-overlay"}}
+  {{> "mobile/navigation" navigation=navigation}}
+{{/"dialog-backdrop"}}

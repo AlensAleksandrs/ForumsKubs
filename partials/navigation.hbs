@@ -4,7 +4,7 @@ site-wide navigation container
 
 <nav id="site-nav" class="w-full hidden sm:flex justify-center gap-16">
   {{#foreach navigation}}
-  <a id="site-nav-link" href="{{this.url}}" class="font-regular text-sm text-light uppercase hover:cursor-pointer hover:underline {{#if current}}hidden{{/if}}">{{label}}</a>
+  <a id="site-nav-link" href="{{this.url}}" class="font-regular text-sm text-light text-center uppercase hover:cursor-pointer hover:underline {{#if current}}hidden{{/if}}">{{label}}</a>
   {{/foreach}}
 </nav>
 

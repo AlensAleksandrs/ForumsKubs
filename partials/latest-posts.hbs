@@ -4,7 +4,7 @@ Relative horizontal display of posts
 
 <div class="w-full h-full bg-container-light p-8">
   <div class="contained grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-    {{#get "posts" filter="tag:-hash-sponsor" order="featured" limit=limit as |posts|}}
+    {{#get "posts" filter="tag:-hash-sponsor+tag:-hash-member" order="published_at desc" limit=limit as |posts|}}
       {{#if posts}}
         {{#foreach posts}}
           {{> "card" page=../pagination.page }}

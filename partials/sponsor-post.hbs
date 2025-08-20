@@ -1,0 +1,38 @@
+{{!--
+post variation for sponsors
+--}}
+
+<div class="w-full bg-container-light">
+  <article class="contained p-4 sm:p-8 md:p-16">
+    {{#if feature_image}}
+      <img
+        src="{{feature_image}}"
+        alt="{{feature_image_alt}}"
+        class="w-full max-w-[200px] aspect-square float-left mr-12 rounded-xl object-cover"
+      />
+    {{/if}}
+    <h1 class="post-title font-bold text-4xl mb-4">{{title}}</h1>
+    <div class="post-content readable font-regular text-md text-justify leading-7 mb-10 lin">
+      {{{html}}}
+    </div>
+
+    <!-- sponsor navigation (only for #sponsor posts) -->
+    {{#has tag="#sponsor"}}
+      <hr class="my-10">
+      <nav aria-label="Citi atbalstītāji" class="space-y-3">
+        <h2 class="text-lg font-semibold">Mūsu atbalstītāji</h2>
+        {{#get "posts" filter="tag:hash-sponsor+id:-{{id}}" order="published_at desc" limit="8" as |sponsors|}}
+          <ul class="flex flex-wrap gap-3">
+            {{#foreach sponsors}}
+              <li>
+                <a href="{{url}}" class="px-4 py-2 rounded-full bg-container-dark/10 hover:bg-container-dark/20 transition">
+                  {{title}}
+                </a>
+              </li>
+            {{/foreach}}
+          </ul>
+        {{/get}}
+      </nav>
+    {{/has}}
+  </article>
+</div>
