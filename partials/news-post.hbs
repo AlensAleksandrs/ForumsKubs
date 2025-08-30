@@ -2,9 +2,18 @@
 post variation for news
 --}}
 
-<div class="w-full h-full p-4 sm:p-8 md:p-16 bg-container-light">
-  <article class="contained">
-    <h1 class="post-title font-bold text-4xl">{{title}}</h1>
-    <p class="font-regular text-sm">{{{html}}}</p>
+<div class="w-full bg-container-light">
+  <article class="contained p-4 sm:p-8 md:p-16 flex items-center justify-center flex-col md:block">
+    {{#if feature_image}}
+      <img
+        src="{{feature_image}}"
+        alt="{{feature_image_alt}}"
+        class="w-full max-w-[500px] md:float-left md:mr-12 mb-12 rounded-xl object-cover"
+      />
+    {{/if}}
+    <h1 class="post-title font-bold text-4xl mb-4">{{title}}</h1>
+    <div class="post-content readable font-regular text-md text-justify leading-7 mb-10 lin">
+      {{{html}}}
+    </div>
   </article>
 </div>
